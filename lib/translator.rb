@@ -23,8 +23,8 @@ def get_japanese_emoticon(lib_name, emoji)
   end
   
   hash.each do |key, value|
-    if hash[key][0] == emoji
-      return hash[key][1]
+    if hash[key][:english] == emoji
+      return hash[key][:japanese]
     end
   end
   emoji
@@ -38,8 +38,8 @@ def get_english_meaning
   end
   
   hash.each do |key, value|
-    if hash[key][1] == emoji
-      return hash[key][0]
+    if hash[key][:japanese] == emoji
+      return hash[key][:english]
     end
   end
   emoji
