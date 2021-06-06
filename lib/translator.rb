@@ -8,8 +8,8 @@ def load_library(lib_name)
   
   hash.each do |key, value|
     new_hash[key] = {
-      :english => new_hash[key][0],
-      :japanese => new_hash[key][1]
+      :english => value[0],
+      :japanese => value[1]
     }
   end
   new_hash
