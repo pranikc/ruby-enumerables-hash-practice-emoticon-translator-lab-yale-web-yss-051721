@@ -39,7 +39,7 @@ def get_english_meaning(lib_name, emoji)
   
   hash.each do |key, value|
     if hash[key][:japanese] == emoji
-      return hash[key][:english]
+      return key
     end
   end
   "Sorry, that emoticon was not found"
