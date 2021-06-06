@@ -19,7 +19,7 @@ def get_japanese_emoticon(lib_name, emoji)
       return hash[key][1]
     end
   end
-  "Sorry, that emoticon was not found"
+  emoji
 end
 
 def get_english_meaning
@@ -34,5 +34,5 @@ def get_english_meaning
       return hash[key][0]
     end
   end
-  "Sorry, that emoticon was not found"
+  emoji
 end
