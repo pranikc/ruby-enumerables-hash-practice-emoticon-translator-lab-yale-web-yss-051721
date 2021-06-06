@@ -4,7 +4,15 @@ require "yaml"
 def load_library(lib_name)
   # code goes here
   hash = YAML.load_file(lib_name)
-  hash
+  new_hash = {}
+  
+  hash.each do |key, value|
+    new_hash[key] = {
+      :english => new_hash[key][0],
+      :japanese => new_hash[key][1]
+    }
+  end
+  new_hash
 end
 
 def get_japanese_emoticon(lib_name, emoji)
