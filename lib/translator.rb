@@ -30,7 +30,7 @@ def get_japanese_emoticon(lib_name, emoji)
   "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning
+def get_english_meaning(lib_name, emoji)
   # code goes here
   hash = load_library(lib_name)
   if hash == {}
